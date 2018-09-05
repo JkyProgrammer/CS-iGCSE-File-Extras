@@ -3,12 +3,6 @@ package main;
 import java.util.Scanner;
 
 public class SimpleCalculator {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		mn();
-	}
-
 	
 	public static void mn () {
 		System.out.println ("Welcome to the Calculator");
