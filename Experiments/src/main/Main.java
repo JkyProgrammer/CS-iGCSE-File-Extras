@@ -5,10 +5,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		SimpleCalculator.mn();
-	}
+	private static Scanner s;
 
 	
 	public static void sliceString () {
@@ -40,7 +37,7 @@ public class Main {
 	public static void sliceStringAtSpace () {
 		System.out.print ("Enter a sentence: ");
 		
-		Scanner s = new Scanner (System.in);
+		s = new Scanner (System.in);
 		String input = s.nextLine().trim();
 		
 		int length = input.length();
@@ -67,7 +64,7 @@ public class Main {
 	}
 	
 	public static void usernameGenerator () {
-		Scanner s = new Scanner (System.in);
+		s = new Scanner (System.in);
 		
 		System.out.print ("Enter your first name: ");
 		String firstName = s.nextLine();
@@ -91,7 +88,7 @@ public class Main {
 	}
 	
 	public static void vowelCounter () {
-		Scanner s = new Scanner (System.in);
+		s = new Scanner (System.in);
 		
 		System.out.println("Enter a string: ");
 		String input = s.nextLine();
