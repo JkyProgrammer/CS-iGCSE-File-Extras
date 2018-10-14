@@ -1,0 +1,11 @@
+Lois Bennett,56,45,78,32
+Eloise Roberts,23,89,67,98
+James Hadwen,65,43,83,45
+Patrick Dua-Brown,21,43,38,29
+Jim Smith,46,35,51,36
+Tom Cook,61,41,35,57
+Tim Jones,63,74,68,85
+John Johnson,85,64,86,97
+James Clark,74,35,14,64
+Bob Simmonds,96,78,75,63
+Jackie Chan,105,-5,1975,63

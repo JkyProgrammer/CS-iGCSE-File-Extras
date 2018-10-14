@@ -4,13 +4,7 @@ import java.util.Scanner;
 
 public class DataStructures {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		searchAgain();
-	}
-
 	private static Scanner s;
-	
 	
 	public static class Record {
 		String name;
@@ -87,7 +81,7 @@ public class DataStructures {
 	
 	public static void concatenateArrays () {
 		int[] array1 = {1,2,3,4,5};
-		int[] array2 = {6,7,8,9,10};
+		int[] array2 = {6,7,8,9,10, 11, 12};
 		
 		int newLength = array1.length + array2.length;
 		
@@ -96,8 +90,8 @@ public class DataStructures {
 		for (int i1 = 0; i1 < array1.length; i1++) {
 			newArray[i1] = array1[i1];
 		}
-		for (int i2 = 0; i2 < array1.length; i2++) {
-			newArray[i2 + array2.length] = array2[i2];
+		for (int i2 = 0; i2 < array2.length; i2++) {
+			newArray[i2 + array1.length] = array2[i2];
 		}
 		
 		for (int i : newArray) {
