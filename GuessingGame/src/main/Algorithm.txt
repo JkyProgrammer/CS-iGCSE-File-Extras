@@ -1,0 +1,19 @@
+SET randomNum TO RANDOM (6)
+SEND "I have chosen a random number. Now you must guess it..." TO DISPLAY
+
+WHILE True
+	SEND "Enter a number between 1 and 6: " TO DISPLAY
+	RECEIVE userInput FROM (INTEGER) KEYBOARD
+	IF userInput > 6 THEN
+		SEND "Make sure your guess is between 1 and 6." TO DISPLAY
+	ELSE IF userInput < 1 THEN
+		SEND "Make sure your guess is between 1 and 6." TO DISPLAY
+	ELSE
+		IF userInput = randomNum THEN
+			SEND "Well done! You guessed my number." TO DISPLAY
+			BREAK;
+		ELSE
+			SEND "Wrong. Try again." TO DISPLAY
+		END IF
+	END IF 
+END WHILE
