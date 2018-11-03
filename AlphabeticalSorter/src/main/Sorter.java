@@ -76,6 +76,7 @@ public class Sorter extends JFrame {
 	long startTime = 0;
 	
 	private void startSort () {
+		runButton.setEnabled(false);
 		output ("Beginning sort algorithm now.");
 		
 		startTime = System.currentTimeMillis();
@@ -178,7 +179,11 @@ public class Sorter extends JFrame {
 			output ("Error: Reading failed, IOException encountered.");
 			return;
 		}
+		isRunning = false;
+		runButton.setEnabled(true);
 	}
+	
+	boolean isRunning = false;
 	
 	public void prepare () {
 		this.setSize(500, 300);
@@ -201,7 +206,15 @@ public class Sorter extends JFrame {
 		inputFileField.addActionListener(new ActionListener () {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				startSort ();
+				if (!isRunning) {
+					isRunning = true;
+					Thread t = new Thread (new Runnable () {
+						public void run () {
+							startSort ();
+						}
+					});
+					t.start();
+				}
 			}
 		});
 		settingsPanel.add(inputFileField);
@@ -216,7 +229,13 @@ public class Sorter extends JFrame {
 		runButton.addActionListener(new ActionListener () {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				startSort ();
+				isRunning = true;
+				Thread t = new Thread (new Runnable () {
+					public void run () {
+						startSort ();
+					}
+				});
+				t.start();
 			}
 		});
 		upperPanel.add(runButton);
