@@ -11,14 +11,14 @@ public class MathFunctionMachine {
 			System.out.print ("Enter an integer: ");
 			int i = Integer.parseInt(s.nextLine());
 			System.out.println("Calculating...");
-			int result = machine1 (i);
+			int result = machine2 (i);
 			System.out.println("Result was " + result);
 		}
 	}
 	
-	public static int machine1 (int input) {
-		int cubed = (input*input*input);
-		int squared = (input*input);
+	public static int machine2 (int input) {
+		int cubed = (int) Math.pow(input, 3);
+		int squared = (int) Math.pow(input, 2);
 		return cubed-squared;
 	}
 	

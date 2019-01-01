@@ -14,7 +14,7 @@ public class VerySimpleMachine {
 				String ss = s.nextLine();
 				try {
 					result = Integer.parseInt (ss);
-				} catch (NumberFormatException e) {}
+				} catch (NumberFormatException e) {System.out.print ("Try entering again: ");}
 			}
 			nums[x] = result;
 		}
