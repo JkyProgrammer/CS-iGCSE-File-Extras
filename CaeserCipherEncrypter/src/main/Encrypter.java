@@ -5,21 +5,26 @@ import java.util.Scanner;
 public class Encrypter {
 
 	public static void main(String[] args) {
-		Scanner s = new Scanner (System.in);
-		System.out.print ("Enter 'e' to encrypt, or anything else to decrypt: ");
-		boolean isEncrypt = s.nextLine().equals("e");
+//		Scanner s = new Scanner (System.in);
+//		System.out.print ("Enter 'e' to encrypt, or anything else to decrypt: ");
+//		boolean isEncrypt = s.nextLine().equals("e");
+//		
+//		System.out.print("Enter plain text to encrypt/decrypt: ");
+//		String input = s.nextLine();
+//		System.out.print("Enter an integer to use as a shift key: ");
+//		int inputKey = Integer.parseInt (s.nextLine());
+//		
+//		if (isEncrypt) {
+//			String cipherText = encrypt (input, inputKey);
+//			System.out.println(cipherText);
+//		} else {
+//			String plainText = decrypt (input, inputKey);
+//			System.out.println(plainText);
+//		}
 		
-		System.out.print("Enter plain text to encrypt/decrypt: ");
-		String input = s.nextLine();
-		System.out.print("Enter an integer to use as a shift key: ");
-		int inputKey = Integer.parseInt (s.nextLine());
-		
-		if (isEncrypt) {
-			String cipherText = encrypt (input, inputKey);
-			System.out.println(cipherText);
-		} else {
-			String plainText = decrypt (input, inputKey);
-			System.out.println(plainText);
+		String in = "Ujnft-Trvbsf jt uif nffuvq tqpu";
+		for (int i = 1; i < 26; i++) {
+			System.out.println (Encrypter.decrypt(in, i));
 		}
 	}
 	
